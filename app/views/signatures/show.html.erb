@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @signature.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @signature.lastname %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @signature.email %>
+</p>
+
+<p>
+  <strong>I want to be kept up to date:</strong>
+  <%= @signature.i_want_to_be_kept_up_to_date %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @signature.comment %>
+</p>
+
+<%= link_to 'Edit', edit_signature_path(@signature) %> |
+<%= link_to 'Back', signatures_path %>

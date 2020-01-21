@@ -1,0 +1,25 @@
+var record_id = "#new_signature";
+var errors = <%= raw @signature.errors.full_messages %>;
+
+if (jQuery.isEmptyObject(errors)) {
+  console.log("keine Fehler");
+
+  content = `
+  <p><strong>Vielen Dank!</strong></p>
+  `;
+
+
+  $(record_id).replaceWith(function(){
+    return $(content).hide().fadeIn("slow");
+  });
+
+} else {
+  console.log("Fehler vorhanden");
+
+    content = $("<%= escape_javascript( render "signatures/form_for_visitor", signature: @signature ) %>");
+
+    $(record_id).replaceWith(function(){
+      return $(content).hide().fadeIn("slow");
+    });
+
+}
