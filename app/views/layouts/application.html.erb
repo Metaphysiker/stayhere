@@ -16,6 +16,11 @@
 
   <body>
     <%= render "layouts/navigation" %>
+
+    <div class="container my-2">
+      <%= flash_messages %>
+    </div>
+    
     <%= yield %>
     <%= render "layouts/footer" %>
   </body>
