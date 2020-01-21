@@ -1,10 +1,15 @@
 class SignaturesController < ApplicationController
+  before_action :authenticate_user!, except: [:add_signature]
   before_action :set_signature, only: [:show, :edit, :update, :destroy]
 
   # GET /signatures
   # GET /signatures.json
   def index
     @signatures = Signature.all
+  end
+
+  def signatures
+    
   end
 
   # GET /signatures/1
