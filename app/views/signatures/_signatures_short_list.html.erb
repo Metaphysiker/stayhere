@@ -1,0 +1,21 @@
+<table class="table table-striped signatures_short_list">
+  <thead>
+    <tr>
+      <th scope="col">Unterschriften</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% Signature.last(10).reverse.each do |signature| %>
+    <tr>
+      <td>
+        <%= "#{signature.firstname}  #{signature.lastname}" %>
+      </td>
+    </tr>
+    <% end %>
+    <tr>
+      <td>
+        <%= link_to "Alle #{Signature.all.count} Unterschriften ansehen", signatures_path %>
+      </td>
+    </tr>
+  </tbody>
+</table>

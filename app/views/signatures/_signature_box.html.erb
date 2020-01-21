@@ -2,27 +2,7 @@
     <div class="col-md-6 col-sm-12">
       <div class="card border-dark mb-3">
         <div class="card-body text-dark">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">Unterschriften</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% Signature.last(10).each do |signature| %>
-              <tr>
-                <td>
-                  <%= "#{signature.firstname}  #{signature.lastname}" %>
-                </td>
-              </tr>
-              <% end %>
-              <tr>
-                <td>
-                  <%= link_to "Alle #{Signature.all.count} Unterschriften ansehen", signatures_path %>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <%= render 'signatures/signatures_short_list' %>
         </div>
       </div>
     </div>

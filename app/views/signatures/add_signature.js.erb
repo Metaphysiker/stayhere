@@ -1,5 +1,6 @@
 var record_id = "#new_signature";
 var errors = <%= raw @signature.errors.full_messages %>;
+var signatures_short_list_class = ".signatures_short_list"
 
 if (jQuery.isEmptyObject(errors)) {
   console.log("keine Fehler");
@@ -12,6 +13,19 @@ if (jQuery.isEmptyObject(errors)) {
   $(record_id).replaceWith(function(){
     return $(content).hide().fadeIn("slow");
   });
+
+  content = $("<%= escape_javascript( render "signatures/signatures_short_list" ) %>");
+
+  $(signatures_short_list_class).replaceWith(function(){
+   return $(content).hide().fadeIn("slow");
+  });
+
+  $(signatures_short_list_class).parent().animate({
+         backgroundColor: "#90EE90",
+       }, 300 ).animate({
+              backgroundColor: "white",
+            }, 300 );
+
 
 } else {
   console.log("Fehler vorhanden");
