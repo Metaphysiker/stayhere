@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: b9e1e29df9b489a59743df892f03775142de37e7
+  branch: master
+  specs:
+    faker (2.10.1)
+      i18n (>= 1.6, < 2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -71,6 +79,9 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
+    capybara-webkit (1.15.1)
+      capybara (>= 2.3, < 4.0)
+      json
     childprocess (3.0.0)
     concurrent-ruby (1.1.5)
     crass (1.0.6)
@@ -83,6 +94,7 @@ GEM
       concurrent-ruby (~> 1.0)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
+    json (2.3.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -223,6 +235,8 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
+  capybara-webkit
+  faker!
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   meta-tags
