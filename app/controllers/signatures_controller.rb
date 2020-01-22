@@ -78,6 +78,10 @@ class SignaturesController < ApplicationController
     end
   end
 
+  def pin_board
+    
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_signature
@@ -86,6 +90,6 @@ class SignaturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def signature_params
-      params.require(:signature).permit(:firstname, :lastname, :email, :i_want_to_be_kept_up_to_date, :comment)
+      params.require(:signature).permit(:firstname, :lastname, :email, :i_want_to_be_kept_up_to_date, :comment, :picture)
     end
 end

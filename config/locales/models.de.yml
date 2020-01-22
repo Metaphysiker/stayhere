@@ -9,5 +9,6 @@ de:
         firstname: "Vorname"
         lastname: "Nachname"
         email: "e-Mail"
-        comment: "Kommentar"
+        comment: "Kommentar (optional)"
         i_want_to_be_kept_up_to_date: "Ich möchte auf dem Laufenden bleiben."
+        picture: "Bild (optional)"
