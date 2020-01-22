@@ -2,7 +2,7 @@ class SignaturesController < ApplicationController
   include ApplicationHelper
   before_action :authenticate_user!, except: [:add_signature, :signatures, :index]
   before_action except: [:add_signature, :signatures, :index] do
-    allow_if_user_has_role("role")
+    allow_if_user_has_role("admin")
   end
 
   before_action :set_signature, only: [:show, :edit, :update, :destroy]

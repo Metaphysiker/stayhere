@@ -1,6 +1,45 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<h1>Signatures</h1>
+
+<div class="row">
+    <div class="col-md-6 col-sm-12">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col"><%= Signature.all.count %> Unterschriften</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% Signature.last(10).reverse.each do |signature| %>
+          <tr>
+            <td>
+              <%= "#{signature.firstname}  #{signature.lastname}" %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col"><%= Signature.all.count %> Unterschriften</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% Signature.last(10).reverse.each do |signature| %>
+          <tr>
+            <td>
+              <%= "#{signature.firstname}  #{signature.lastname}" %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+</div>
 
 <table>
   <thead>
@@ -30,6 +69,4 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Signature', new_signature_path %>
+</div>
