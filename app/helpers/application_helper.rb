@@ -15,4 +15,12 @@ module ApplicationHelper
     nil
   end
 
+  def allow_if_user_has_role(role)
+    unless !current_user.nil? && current_user.role == role
+      sign_out current_user
+      flash[:notice] = "Sie sind nicht authorisiert!"
+      redirect_to new_user_session_path
+    end
+  end
+
 end

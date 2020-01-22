@@ -1,15 +1,16 @@
 class SignaturesController < ApplicationController
-  before_action :authenticate_user!, except: [:add_signature]
+  include ApplicationHelper
+  before_action :authenticate_user!, except: [:add_signature, :signatures, :index]
+  before_action except: [:add_signature, :signatures, :index] do
+    allow_if_user_has_role("role")
+  end
+
   before_action :set_signature, only: [:show, :edit, :update, :destroy]
 
   # GET /signatures
   # GET /signatures.json
   def index
     @signatures = Signature.all
-  end
-
-  def signatures
-    
   end
 
   # GET /signatures/1
