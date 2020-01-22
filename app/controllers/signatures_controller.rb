@@ -1,7 +1,7 @@
 class SignaturesController < ApplicationController
   include ApplicationHelper
-  before_action :authenticate_user!, except: [:add_signature, :signatures, :index]
-  before_action except: [:add_signature, :signatures, :index] do
+  before_action :authenticate_user!, except: [:add_signature, :signatures, :index, :pin_board]
+  before_action except: [:add_signature, :signatures, :index, :pin_board] do
     allow_if_user_has_role("admin")
   end
 
@@ -79,7 +79,7 @@ class SignaturesController < ApplicationController
   end
 
   def pin_board
-    
+
   end
 
   private

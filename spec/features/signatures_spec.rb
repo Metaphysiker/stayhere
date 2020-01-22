@@ -6,7 +6,9 @@ RSpec.describe "signatures", :type => :feature do
 
     visit root_path
 
-    expect(page).to have_content("Offener Brief")
+    expect(page).to have_content("Zum Offenen Brief")
+    click_on('Zum Offenen Brief')
+    expect(page).to have_current_path(open_letter_path)
   end
 
 
@@ -17,16 +19,12 @@ RSpec.describe "signatures", :type => :feature do
 
     visit open_letter_path
 
-    expect(page).to have_content("Unterschreiben")
-
-    click_button 'Unterschreiben'
-
     fill_in 'Vorname', with: firstname
     fill_in 'Nachname', with: lastname
 
     click_button 'Unterschrift einreichen'
 
-    expect(page).to have_content("Unterschrift wurde eingereicht!")
+    expect(page).to have_content("Vielen Dank!")
     expect(page).to have_content(firstname + " " + lastname)
   end
 
@@ -34,25 +32,21 @@ RSpec.describe "signatures", :type => :feature do
 
     firstname = Faker::Name.first_name
     lastname = Faker::Name.last_name
+    email = Faker::Internet.email
 
     visit open_letter_path
 
-    expect(page).to have_content("Unterschreiben")
-
-    click_button 'Unterschreiben'
-
     fill_in 'Vorname', with: firstname
     fill_in 'Nachname', with: lastname
-
-    check 'i_want_to_be_kept_up_to_date'
-    expect(page).to have_content("e-Mail")
-
-    fill_in 'e-Mail', with: Faker::Internet.email
+    check 'signature_i_want_to_be_kept_up_to_date'
+    fill_in 'e-Mail', with: email
 
     click_button 'Unterschrift einreichen'
 
-    expect(page).to have_content("Unterschrift wurde eingereicht!")
+    expect(page).to have_content("Vielen Dank!")
     expect(page).to have_content(firstname + " " + lastname)
+
+    expect(Signature.where(email: email).empty?).to be false
 
   end
 
@@ -64,24 +58,17 @@ RSpec.describe "signatures", :type => :feature do
 
     visit open_letter_path
 
-    expect(page).to have_content("Unterschreiben")
-
-    click_button 'Unterschreiben'
-
     fill_in 'Vorname', with: firstname
     fill_in 'Nachname', with: lastname
-
-    check 'i_want_to_be_kept_up_to_date'
-    expect(page).to have_content("e-Mail")
-
-    fill_in 'e-Mail', with: Faker::Internet.email
 
     fill_in 'Kommentar', with: comment
 
     click_button 'Unterschrift einreichen'
 
-    expect(page).to have_content("Unterschrift wurde eingereicht!")
+    expect(page).to have_content("Vielen Dank!")
     expect(page).to have_content(firstname + " " + lastname)
+
+    visit pin_board_path
     expect(page).to have_content(comment)
 
   end
