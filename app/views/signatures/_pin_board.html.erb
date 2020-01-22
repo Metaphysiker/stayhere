@@ -1,17 +1,11 @@
 
 <h1 class="text-center">Pinwand</h1>
 <hr />
-<% Signature.with_comment.reverse.each do |signature| %>
-  <div class="row featurette">
-    <div class="col-md-7">
-      <h2 class="featurette-heading"><%= signature.firstname %> <%= signature.lastname %></h2>
-      <p class="lead"><%= signature.comment %></p>
+
+<div class="row">
+  <% Signature.with_comment.reverse.each do |signature| %>
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-3">
+      <%= render 'signatures/show', signature: signature %>
     </div>
-    <div class="col-md-5">
-      <% if signature.picture.attached? %>
-        <%= image_tag signature.picture, class: "featurette-image img-fluid mx-auto" %>
-      <% end %>
-    </div>
-  </div>
-  <hr class="featurette-divider">
   <% end %>
+</div>

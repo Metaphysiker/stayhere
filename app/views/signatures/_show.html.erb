@@ -1,0 +1,13 @@
+<div class="card h-100 my-3 <%= dom_id(signature) %>">
+  <% if signature.picture.attached? %>
+    <div class="card-header text-center">
+      <%= image_tag signature.picture, class: "img-fluid mx-auto max-height-300 rounded" %>
+    </div>
+  <% end %>
+  <div class="card-body text-darker-base-color">
+    <h3 class="card-title text-center"><%= signature.firstname %> <%= signature.lastname %></h3>
+    <div class="text-justify">
+      <p class="card-text"><%= signature.comment %></p>
+    </div>
+  </div>
+</div>

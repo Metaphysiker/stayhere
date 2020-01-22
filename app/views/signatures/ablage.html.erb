@@ -50,3 +50,33 @@
     <% end %>
   </tbody>
 </table>
+
+<% Signature.with_comment.reverse.each do |signature| %>
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading"><%= signature.firstname %> <%= signature.lastname %></h2>
+      <p class="lead"><%= signature.comment %></p>
+    </div>
+    <div class="col-md-5">
+      <% if signature.picture.attached? %>
+        <%= image_tag signature.picture, class: "featurette-image img-fluid mx-auto" %>
+      <% end %>
+    </div>
+  </div>
+  <hr class="featurette-divider">
+  <% end %>
+
+  <div class="card-deck">
+    <% Signature.with_comment.reverse.each do |signature| %>
+    <div class="card">
+      <% if signature.picture.attached? %>
+          <%= image_tag signature.picture, class: "card-img-top" %>
+      <% end %>
+      <div class="card-body">
+        <h5 class="card-title text-center"><%= signature.firstname %> <%= signature.lastname %></h5>
+        <hr />
+        <p class="lead card-text"><%= signature.comment %></p>
+      </div>
+    </div>
+    <% end %>
+  </div>
