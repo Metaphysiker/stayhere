@@ -35,4 +35,15 @@ class StaticPagesController < ApplicationController
   def preles
   end
 
+  def download_pdf
+
+    name = params[:name]
+
+    send_file(
+      "#{Rails.root}/public/pdfs/#{name}.pdf",
+      filename: name,
+      type: "application/pdf"
+    )
+  end
+
 end

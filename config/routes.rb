@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   post '/signatures/add_signature', to: "signatures#add_signature", as: 'add_signature'
 
   get 'pin_board', to: 'signatures#pin_board', as: 'pin_board'
+
+  get "static_pages/download_pdf/:name", to: 'static_pages#download_pdf', as: 'download_pdf'
 end
