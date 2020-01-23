@@ -5,7 +5,11 @@
     <div class="col-sm-8 col-md-7 py-4">
       <h4 class="text-white">Über uns</h4>
       <p class="text-white">Arbeitsgruppe "Sie bleiben hier!"</p>
-      <h4 class="text-white">Offener Brief und Petition</h4>
+      <h4 class="text-white">Links</h4>
+      <%= link_to "Eine Bieler Familie", biel_path, class: "text-white" %>
+      <br />
+      <%= link_to "Asyl", asyl_path, class: "text-white" %>
+      <br />
       <%= link_to "Zum Offenen Brief und zur Petition", open_letter_path, class: "text-white" %>
       <br />
       <%= link_to "Pinwand", pin_board_path, class: "text-white" %>
@@ -15,7 +19,7 @@
       <ul class="list-unstyled">
         <li><a href="#" class="text-white">e-Mail</a></li>
         <li><a href="#" class="text-white">Mithelfen</a></li>
-        <li><a href="#" class="text-white">Spenden</a></li>
+        <li><%= link_to "Spenden", donate_path, class: "text-white" %></li>
       </ul>
     </div>
   </div>
