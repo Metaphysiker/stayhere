@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'route_translator'
 gem "aws-sdk-s3", require: false
 gem 'devise-i18n'
 gem 'rails-i18n'

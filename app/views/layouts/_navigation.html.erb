@@ -10,22 +10,23 @@
       <br />
       <%= link_to "Vorbild Langenbruck", langbruck_path, class: "text-white" %>
       <br />
-      <%= link_to "Asylverfahren", asyl_path, class: "text-white" %>
+      <%= link_to "Asylverfahren","https://www.alle-menschen.ch/?page_id=202", class: "text-white" %>
       <br />
       <%= link_to "Nothilfe", "https://www.ag-nothilfe.ch/was-ist-nothilfe", class: "text-white" %>
       <br />
       <%= link_to "Kinderrechte", children_right_path, class: "text-white" %>
-      <br />
-      <%= link_to "Petition", open_letter_path, class: "text-white" %>
-      <br />
-      <%= link_to "Unterstützen", pin_board_path, class: "text-white" %>
-      <br />
-      <%= link_to "Spenden", donate_path, class: "text-white" %>
+
     </div>
     <div class="col-sm-4 offset-md-0 py-4">
       <h4 class="text-white">Über uns</h4>
       <p>
         <%= link_to 'Arbeitsgruppe "Sie bleiben hier!', about_path, class: "text-white" %>
+        <br />
+        <%= link_to "Petition", open_letter_path, class: "text-white" %>
+        <br />
+        <%= link_to "Unterstützen", pin_board_path, class: "text-white" %>
+        <br />
+        <%= link_to "Spenden", donate_path, class: "text-white" %>
         <br />
         <%= mail_to "philipp.blum@philosophie.ch", "e-Mail", class: "text-white"   %>
       </p>
