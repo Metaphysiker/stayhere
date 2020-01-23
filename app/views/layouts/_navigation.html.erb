@@ -3,24 +3,32 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-8 col-md-7 py-4">
-      <h4 class="text-white">Über uns</h4>
-      <p class="text-white">Arbeitsgruppe "Sie bleiben hier!"</p>
       <h4 class="text-white">Links</h4>
       <%= link_to "Eine Bieler Familie", biel_path, class: "text-white" %>
       <br />
-      <%= link_to "Asyl", asyl_path, class: "text-white" %>
+      <%= link_to "Presseschau", press_review_path, class: "text-white" %>
       <br />
-      <%= link_to "Zum Offenen Brief und zur Petition", open_letter_path, class: "text-white" %>
+      <%= link_to "Vorbild Langenbruck", langbruck_path, class: "text-white" %>
       <br />
-      <%= link_to "Pinwand", pin_board_path, class: "text-white" %>
+      <%= link_to "Asylverfahren", asyl_path, class: "text-white" %>
+      <br />
+      <%= link_to "Nothilfe", "https://www.ag-nothilfe.ch/was-ist-nothilfe", class: "text-white" %>
+      <br />
+      <%= link_to "Kinderrechte", children_right_path, class: "text-white" %>
+      <br />
+      <%= link_to "Petition", open_letter_path, class: "text-white" %>
+      <br />
+      <%= link_to "Unterstützen", pin_board_path, class: "text-white" %>
+      <br />
+      <%= link_to "Spenden", donate_path, class: "text-white" %>
     </div>
-    <div class="col-sm-4 offset-md-1 py-4">
-      <h4 class="text-white">Kontakt</h4>
-      <ul class="list-unstyled">
-        <li><a href="#" class="text-white">e-Mail</a></li>
-        <li><a href="#" class="text-white">Mithelfen</a></li>
-        <li><%= link_to "Spenden", donate_path, class: "text-white" %></li>
-      </ul>
+    <div class="col-sm-4 offset-md-0 py-4">
+      <h4 class="text-white">Über uns</h4>
+      <p>
+        <%= link_to 'Arbeitsgruppe "Sie bleiben hier!', about_path, class: "text-white" %>
+        <br />
+        <%= mail_to "philipp.blum@philosophie.ch", "e-Mail", class: "text-white"   %>
+      </p>
     </div>
   </div>
 </div>

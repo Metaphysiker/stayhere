@@ -23,6 +23,15 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
+  def about
+  end
+
+  def langbruck
+  end
+
+  def children_right
+  end
+
   def preles
   end
 
