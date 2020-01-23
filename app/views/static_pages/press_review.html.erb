@@ -4,7 +4,7 @@
 <div class="container">
   <h1>Presseschau</h1>
   <p class="lead text-muted">
-    <%= link_to "Zum Offenen Brief und zur Petition", open_letter_path %>
+    <%= link_to "Zum offenen Brief und zur Petition", open_letter_path %>
   </p>
 </div>
 </section>
@@ -14,8 +14,7 @@
 
     <p class="western" style="margin-bottom: 0in">Beispiel eines
     Unterstützungsbriefs: Rolf Hermann an den Gemeinderat, 19.1.2020:</p>
-    <p class="western" style="margin-bottom: 0in"><span>      <%= link_to 'Trotz Bundesurteil: Baselland schafft eine Flüchtlingsfamilie
-    nicht aus – zumindest vorerst', download_pdf_path("langbruck") %></span></p>
+    <p class="western" style="margin-bottom: 0in"><span>      <%= link_to 'Keine Ausschaffung, sondern Aufenthaltsbewilligung für Familie Safaryan-Mikayelyan', download_pdf_path("brief-rolf-herman") %></span></p>
     <p lang="en" class="western" style="margin-bottom: 0in"><span lang="de-CH"><br/>
     </p>
     <p>
@@ -28,28 +27,15 @@
     <p>
     Journal du Jura:<br/>
     <%= link_to "Une famille menacée d'éclater", download_pdf_path("menace") %></p>
-    <br/>
-    RJB:
-    https://www.rjb.ch/rjb/Actualite/Region/20200116-Bienne-garde-une-marge-de-manoeuvre-dans-sa-politique-fonciere.html<br/>
-  <span lang="de-CH"><span style="background: #ff6666">(pdf
-    fehlt noch)</span></span></p>
-    <p lang="fr-CH" class="western" style="margin-bottom: 0in"><br/>
-
-    </p>
     <p lang="en" class="western" style="margin-bottom: 0in"><span lang="de-CH">Bieler
-    Tagblatt, 15.1. (Lino
-    Schaeren):<br/>
-    https://www.bielertagblatt.ch/nachrichten/biel/politiker-solidarisieren-sich-mit-familie-safaryanmikayelyan<br/>
-    </span><span lang="de-CH"><span style="background: #ff6666">(pdf
-    fehlt noch)</span></span><span lang="de-CH"><br/>
+    Tagblatt, 15.1. (Lino Schaeren):<br/>
+    <%= link_to 'Politiker solidarisieren sich mit Familie Safaryan/Mikayelyan', download_jpg_path("politiker-solidarisieren") %>
+    </p>
+    <p>
     <br/>
     Journal du
     Jura:<br/>
-    https://www.journaldujura.ch/nouvelles-en-ligne/region/des-elus-solidaires-des-safaryanmikayelyan<br/>
-    </span><span lang="de-CH"><span style="background: #ff6666">(pdf
-    fehlt noch)</span></span></p>
-    <p class="western" style="margin-bottom: 0in"><br/>
-
+    <%= link_to "Des élus solidaires des Safaryan/Mikayelyan", "https://www.journaldujura.ch/nouvelles-en-ligne/region/des-elus-solidaires-des-safaryanmikayelyan" %><br/>
     </p>
   </div>
 </div>

@@ -6,8 +6,8 @@ RSpec.describe "signatures", :type => :feature do
 
     visit root_path
 
-    expect(page).to have_content("Zum Offenen Brief")
-    click_on('Zum Offenen Brief')
+    expect(page).to have_content("Zum offenen Brief")
+    click_on('Zum offenen Brief')
     expect(page).to have_current_path(open_letter_path)
   end
 

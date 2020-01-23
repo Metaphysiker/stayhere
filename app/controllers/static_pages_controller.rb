@@ -46,4 +46,15 @@ class StaticPagesController < ApplicationController
     )
   end
 
+  def download_jpg
+
+    name = params[:name]
+
+    send_file(
+      "#{Rails.root}/public/pdfs/#{name}.jpg",
+      filename: name,
+      type: "image/jpeg"
+    )
+  end
+
 end
