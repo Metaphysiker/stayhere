@@ -3,8 +3,8 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :firstname %>
-    <%= f.input :lastname %>
+    <%= f.input :firstname, required: false %>
+    <%= f.input :lastname, required: false %>
     <%= f.input :i_want_to_be_kept_up_to_date %>
     <div class="email_field <%= 'hidden' if signature.i_want_to_be_kept_up_to_date.nil? || signature.i_want_to_be_kept_up_to_date == false  %>">
       <%= f.input :email %>
