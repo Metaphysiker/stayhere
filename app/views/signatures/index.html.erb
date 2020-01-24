@@ -6,7 +6,7 @@
       </tr>
     </thead>
     <tbody>
-      <% Signature.last(10).reverse.each do |signature| %>
+      <% Signature.all.reverse.each do |signature| %>
       <tr>
         <td>
           <%= "#{signature.firstname}  #{signature.lastname}" %>
