@@ -11,9 +11,16 @@
 
 <div class="bg-light">
   <div class="container text-justify">
+    <p>
+      Brief der Parlamentarier an den Gemeinderat, 15.1., deutsch und französisch:
+      <br />
+        <%= link_to 'Brief-an-den-Gesamtgemeinderat Überparteilich', download_pdf_path("brief-de") %>
+      <br />
+        <%= link_to 'PSR20-f-Déclaration-interpartis-de-groupes-Famille-Safaryan-Mikayelyan', download_pdf_path("brief-fr") %>
+    </p>
 
     <p class="western" style="margin-bottom: 0in">Beispiel eines
-    Unterstützungsbriefs: Rolf Hermann an den Gemeinderat, 19.1.2020:</p>
+    Unterstützungsbriefs: <%= link_to "Rolf Hermann", "http://www.rolfhermann.ch" %> an den Gemeinderat, 19.1.2020:</p>
     <p class="western" style="margin-bottom: 0in"><span>      <%= link_to 'Keine Ausschaffung, sondern Aufenthaltsbewilligung für Familie Safaryan-Mikayelyan', download_pdf_path("brief-rolf-herman") %></span></p>
     <p lang="en" class="western" style="margin-bottom: 0in"><span lang="de-CH"><br/>
     </p>
