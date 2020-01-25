@@ -1,16 +1,5 @@
 <main role="main" class="bg-light">
-
-<section class="jumbotron text-center">
-<div class="container">
-  <h1>Kinderrechte</h1>
-  <p class="lead text-muted">
-    Das Wohl des Kindes hat <strong>Vorrang</strong>. Dies gilt in der Familie genauso wie für <strong>staatliches Handeln</strong>. 
-  </p>
-  <p class="lead text-muted">
-    <%= link_to "Zum offenen Brief und zur Petition", open_letter_path %>
-  </p>
-</div>
-</section>
+<%= render "layouts/lead", title: 'Kinderrechte', sub_title: "Das Wohl des Kindes hat <strong>Vorrang</strong>. Dies gilt in der Familie genauso wie für <strong>staatliches Handeln</strong>.", link_to_petition: "true" %>
 
 <div class="bg-light">
   <div class="container text-justify">
