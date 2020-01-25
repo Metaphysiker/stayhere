@@ -1,7 +1,7 @@
 <table class="table table-striped signatures_short_list">
   <thead>
     <tr>
-      <th scope="col">Unterschriften</th>
+      <th scope="col"><%= Signature.model_name.human(count: 2) %></th>
     </tr>
   </thead>
   <tbody>
@@ -14,7 +14,7 @@
     <% end %>
     <tr>
       <td>
-        <%= link_to "Alle #{Signature.all.count} Unterschriften ansehen", signatures_path %>
+        <%= link_to t('show_all_signatures', number: Signature.all.count), signatures_path %>
       </td>
     </tr>
   </tbody>

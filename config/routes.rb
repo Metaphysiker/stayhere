@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :signatures
+
 
   scope "(:locale)", locale: /de|fr/ do
     root 'static_pages#biel'
-
+    resources :signatures
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   end

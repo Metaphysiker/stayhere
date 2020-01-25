@@ -47,3 +47,5 @@ fr:
   sign_petition: "Signez la pétition"
   petition_info: "Commentaire et photo (facultatif)"
   enter_signature: "Soumettre la signature"
+  thank_you: "Merci beaucoup."
+  show_all_signatures: "Voir toutes les signatures (%{number})"

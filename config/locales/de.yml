@@ -47,3 +47,5 @@ de:
   sign_petition: "Petition unterschreiben"
   petition_info: "Kommentar und Bild für die Pinnwand (optional)"
   enter_signature: "Unterschrift einreichen"
+  thank_you: "Vielen Dank."
+  show_all_signatures: "Alle %{number} Unterschriften ansehen"
