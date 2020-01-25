@@ -24,7 +24,7 @@ RSpec.describe "signatures", :type => :feature do
 
     click_button 'Unterschrift einreichen'
 
-    expect(page).to have_content("Vielen Dank!")
+    expect(page).to have_content("Vielen Dank")
     expect(page).to have_content(firstname + " " + lastname)
   end
 
@@ -43,7 +43,7 @@ RSpec.describe "signatures", :type => :feature do
 
     click_button 'Unterschrift einreichen'
 
-    expect(page).to have_content("Vielen Dank!")
+    expect(page).to have_content("Vielen Dank")
     expect(page).to have_content(firstname + " " + lastname)
 
     expect(Signature.where(email: email).empty?).to be false
@@ -65,7 +65,7 @@ RSpec.describe "signatures", :type => :feature do
 
     click_button 'Unterschrift einreichen'
 
-    expect(page).to have_content("Vielen Dank!")
+    expect(page).to have_content("Vielen Dank")
     expect(page).to have_content(firstname + " " + lastname)
 
     visit pin_board_path

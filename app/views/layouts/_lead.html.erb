@@ -10,7 +10,7 @@
             <%= sub_title.html_safe %> <br />
           <% end %>
           <% if local_assigns.has_key? :link_to_petition %>
-            <%= link_to "Zum offenen Brief und zur Petition", open_letter_path %>
+            <%= link_to t("go_to_the_petition"), open_letter_path %>
           <% end %>
         </p>
     </div>
