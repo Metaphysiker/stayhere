@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+
   resources :signatures
-  devise_for :users
-  root 'static_pages#biel'
+
+  scope "(:locale)", locale: /de|fr/ do
+    root 'static_pages#biel'
+  end
+
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   localized do
     get 'open_letter', to: 'static_pages#open_letter', as: 'open_letter'
@@ -22,4 +27,6 @@ Rails.application.routes.draw do
 
   get "static_pages/download_pdf/:name", to: 'static_pages#download_pdf', as: 'download_pdf'
   get "static_pages/download_jpg/:name", to: 'static_pages#download_jpg', as: 'download_jpg'
+
+    devise_for :users
 end

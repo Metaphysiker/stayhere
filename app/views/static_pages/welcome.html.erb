@@ -1,18 +1,8 @@
 <main role="main" class="bg-light">
 
-<section class="jumbotron text-center">
-<div class="container">
-  <h1>Familie S. gehört zu uns
-    und bleibt hier!</h1>
-  <p class="lead text-muted">
-    Sie sind auf der brandneuen Website
-    der Arbeitsgruppe "Sie bleiben hier!"
-  </p>
-  <p class="lead text-muted">
-    <%= link_to "Zum offenen Brief und zur Petition", open_letter_path %>
-  </p>
-</div>
-</section>
+<%= render "layouts/lead", title: 'Familie S. gehört zu uns
+  und bleibt hier!', sub_title: '    Sie sind auf der brandneuen Website
+      der Arbeitsgruppe "Sie bleiben hier!"', link_to_petition: "true" %>
 
 <div class="bg-light">
   <div class="container text-justify">
