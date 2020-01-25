@@ -1,0 +1,14 @@
+fr:
+  activerecord:
+    models:
+      signature:
+        one: "Signature"
+        other: "Signatures"
+    attributes:
+      signature:
+        firstname: "Prénom"
+        lastname: "Nom de famille"
+        email: "e-mail"
+        comment: "Commentaire"
+        i_want_to_be_kept_up_to_date: "J'aimerais être tenu au courant."
+        picture: "Photo"

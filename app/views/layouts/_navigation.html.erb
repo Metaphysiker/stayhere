@@ -3,32 +3,32 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-8 col-md-7 py-4">
-      <h4 class="text-white">Links</h4>
-      <%= link_to "Eine Bieler Familie", biel_path, class: "text-white" %>
+      <h4 class="text-white"><%= t("family_m_s") %></h4>
+      <%= link_to t("a_bieler_family"), biel_path, class: "text-white" %>
       <br />
-      <%= link_to "Presseschau", press_review_path, class: "text-white" %>
+      <%= link_to t("press_review"), press_review_path, class: "text-white" %>
       <br />
-      <%= link_to "Vorbild Langenbruck", langbruck_path, class: "text-white" %>
+      <%= link_to t("langenbruck"), langbruck_path, class: "text-white" %>
       <br />
-      <%= link_to "Asylverfahren","https://www.alle-menschen.ch/?page_id=202", class: "text-white" %>
+      <%= link_to t("asyl"),"https://www.alle-menschen.ch/?page_id=202", class: "text-white" %>
       <br />
-      <%= link_to "Nothilfe", "https://www.ag-nothilfe.ch/was-ist-nothilfe", class: "text-white" %>
+      <%= link_to t("nothilfe"), "https://www.ag-nothilfe.ch/was-ist-nothilfe", class: "text-white" %>
       <br />
-      <%= link_to "Kinderrechte", children_right_path, class: "text-white" %>
+      <%= link_to t("children_right"), children_right_path, class: "text-white" %>
 
     </div>
     <div class="col-sm-4 offset-md-0 py-4">
-      <h4 class="text-white">Über uns</h4>
+      <h4 class="text-white"><%= t("about_us") %></h4>
       <p>
-        <%= link_to 'Arbeitsgruppe "Sie bleiben hier!', about_path, class: "text-white" %>
+        <%= link_to t("work_group"), about_path, class: "text-white" %>
         <br />
-        <%= link_to "Petition", open_letter_path, class: "text-white" %>
+        <%= link_to t("petition"), open_letter_path, class: "text-white" %>
         <br />
-        <%= link_to "Unterstützen", pin_board_path, class: "text-white" %>
+        <%= link_to t("support"), pin_board_path, class: "text-white" %>
         <br />
-        <%= link_to "Pinnwand", pin_board_path, class: "text-white" %>
+        <%= link_to t("pin_board"), pin_board_path, class: "text-white" %>
         <br />
-        <%= link_to "Spenden", donate_path, class: "text-white" %>
+        <%= link_to t("donate"), donate_path, class: "text-white" %>
         <br />
         <%= mail_to "philipp.blum@philosophie.ch", "e-Mail", class: "text-white"   %>
       </p>
@@ -42,11 +42,15 @@
         Sie bleiben hier!
     <% end %>
 
-    <span class="ml-auto mr-3">
+    <span class="ml-auto mr-3 text-white">
       <% if I18n.locale.to_s == "fr" %>
+      <%= link_to 'DE', root_path(locale: ""), class: "text-secondary" %>
+       |
+      <%= link_to 'FR', root_path(locale: "fr"), class: "text-white" %>
+        <% else %>
         <%= link_to 'DE', root_path(locale: ""), class: "text-white" %>
-      <% else %>
-        <%= link_to 'FR', root_path(locale: "fr"), class: "text-white" %>
+          |
+        <%= link_to 'FR', root_path(locale: "fr"), class: "text-secondary" %>
       <% end %>
     </span>
 
