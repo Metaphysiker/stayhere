@@ -1,12 +1,14 @@
 var record_id = "#new_signature";
 var errors = <%= raw @signature.errors.full_messages %>;
 var signatures_short_list_class = ".signatures_short_list";
+var message = "<%= I18n.t(:thank_you) %>";
+console.log(message);
 
 if (jQuery.isEmptyObject(errors)) {
   console.log("keine Fehler");
 
   content = `
-  <p><strong>Vielen Dank / Merci Beaucoup</strong></p>
+  <p><strong>${message}</strong></p>
   `;
 
 
