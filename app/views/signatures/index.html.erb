@@ -10,6 +10,9 @@
       <tr>
         <td>
           <%= "#{signature.firstname}  #{signature.lastname}" %>
+          <% if user_signed_in? %>
+            <%= link_to 'Bearbeiten', edit_signature_path(signature) %>
+          <% end %>
         </td>
       </tr>
       <% end %>
