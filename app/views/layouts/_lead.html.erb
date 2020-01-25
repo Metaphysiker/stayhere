@@ -1,0 +1,26 @@
+<section class="jumbotron text-center bg-yellow">
+<div class="container text-left ">
+  <div class="row">
+    <div class="col-lg-8 col-md-9 col-sm-12">
+      <br />
+      <br />
+      <h2 class="text-darker-yellow"><%= title %></h2>
+      <% if local_assigns.has_key? :sub_title %>
+        <p class="lead text-muted text-darker-yellow">
+          <%= sub_title %>
+        </p>
+      <% end %>
+      <% if local_assigns.has_key? :link_to_petition %>
+      <p class="lead text-muted">
+        <%= link_to "Zum offenen Brief und zur Petition", open_letter_path %>
+      </p>
+      <% end %>
+    </div>
+    <div class="col-lg-4 col-md-3 col-sm-12 text-center">
+        <%= image_tag "k30years", class: "img-fluid mx-auto max-height-300" %>
+    </div>
+  </div>
+
+</div>
+
+</section>
