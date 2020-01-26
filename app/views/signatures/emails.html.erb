@@ -1,0 +1,33 @@
+<div class="container">
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"><%= Signature.all.count %> <%= Signature.model_name.human(count: 2) %></th>
+        <th scope="col">e-mail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% Signature.all.reverse.each do |signature| %>
+      <tr>
+        <td>
+          <%= "#{signature.firstname}  #{signature.lastname}" %>
+          <% if user_signed_in? %>
+            <%= link_to 'Bearbeiten', edit_signature_path(signature) %>
+          <% end %>
+        </td>
+        <td>
+          <%= signature.email %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+<hr />
+  <p>
+    <% emails = Signature.all.pluck(:email).uniq %>
+    <% emails.each do |email| %>
+      <%= email %> <br />
+    <% end %>
+  </p>
+</div>

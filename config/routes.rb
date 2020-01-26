@@ -29,5 +29,7 @@ Rails.application.routes.draw do
   get "static_pages/download_pdf/:name", to: 'static_pages#download_pdf', as: 'download_pdf'
   get "static_pages/download_jpg/:name", to: 'static_pages#download_jpg', as: 'download_jpg'
 
+  get "signatures-admin/emails", to: "signatures#emails", as: 'emails'
+
     devise_for :users
 end

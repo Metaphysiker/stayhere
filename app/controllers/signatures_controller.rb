@@ -13,6 +13,10 @@ class SignaturesController < ApplicationController
     @signatures = Signature.all
   end
 
+  def emails
+    
+  end
+
   # GET /signatures/1
   # GET /signatures/1.json
   def show
