@@ -41,7 +41,7 @@ class StaticPagesController < ApplicationController
 
     send_file(
       "#{Rails.root}/public/pdfs/#{name}.pdf",
-      filename: name,
+      filename: "#{name}.pdf",
       type: "application/pdf"
     )
   end
@@ -52,7 +52,7 @@ class StaticPagesController < ApplicationController
 
     send_file(
       "#{Rails.root}/public/pdfs/#{name}.jpg",
-      filename: name,
+      filename: "#{name}.jpg",
       type: "image/jpeg"
     )
   end
