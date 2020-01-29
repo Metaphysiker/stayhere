@@ -7,4 +7,9 @@ class Signature < ApplicationRecord
   has_one_attached :picture
 
   scope :with_comment, -> { where.not(comment: "") }
+
+  def fullname
+    firstname + " " + lastname
+  end
+  
 end

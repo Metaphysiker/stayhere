@@ -14,7 +14,7 @@ class SignaturesController < ApplicationController
   end
 
   def emails
-    
+
   end
 
   # GET /signatures/1
@@ -66,9 +66,10 @@ class SignaturesController < ApplicationController
   def destroy
     @signature.destroy
     respond_to do |format|
-      format.html { redirect_to signatures_url, notice: 'Signature was successfully destroyed.' }
+      format.html { redirect_to emails_url, notice: 'Signature was successfully destroyed.' }
       format.json { head :no_content }
     end
+
   end
 
   def add_signature
