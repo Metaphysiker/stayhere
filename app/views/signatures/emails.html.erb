@@ -6,6 +6,7 @@
         <th scope="col"><%= Signature.all.count %> <%= Signature.model_name.human(count: 2) %></th>
         <th scope="col">Duplikat vorhanden</th>
         <th scope="col">e-mail</th>
+        <th scope="col">Kommentar</th>
         <th scope="col">Bearbeiten</th>
         <th scope="col">Löschen</th>
       </tr>
@@ -24,6 +25,9 @@
         </td>
         <td>
           <%= signature.email %>
+        </td>
+        <td>
+          <%= signature.comment %>
         </td>
 
         <td>
