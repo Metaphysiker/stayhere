@@ -17,7 +17,8 @@
           <%= "#{signature.firstname}  #{signature.lastname}" %>
         </td>
         <td>
-          <% if Signature.where(firstname: signature.firstname).count > 1 && Signature.where(lastname: signature.lastname).count > 1   %>
+          <% firstname_signatures = Signature.where(firstname: signature.firstname) %>
+          <% if firstname_signatures.count > 1 && firstname_signatures.where(lastname: signature.lastname).count > 1   %>
           x
           <% end %>
         </td>
