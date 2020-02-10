@@ -143,6 +143,8 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
+    nokogumbo (2.0.2)
+      nokogiri (~> 1.8, >= 1.8.4)
     orm_adapter (0.5.0)
     pg (1.1.4)
     public_suffix (4.0.1)
@@ -213,6 +215,10 @@ GEM
     rspec-support (3.9.2)
     ruby_dep (1.5.0)
     rubyzip (2.0.0)
+    sanitize (5.1.0)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.8.0)
+      nokogumbo (~> 2.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.2.1)
@@ -243,9 +249,10 @@ GEM
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    turbolinks (5.2.1)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
+    tinymce-rails (5.1.4)
+      railties (>= 3.1.1)
+    tinymce-rails-langs (0.1)
+      tinymce-rails (>= 3.4.9)
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
     warden (1.2.8)
@@ -291,12 +298,14 @@ DEPENDENCIES
   rails-i18n
   route_translator
   rspec-rails
+  sanitize
   sass-rails (>= 6)
   selenium-webdriver
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
-  turbolinks (~> 5)
+  tinymce-rails
+  tinymce-rails-langs
   tzinfo-data
   web-console (>= 3.3.0)
   webdrivers

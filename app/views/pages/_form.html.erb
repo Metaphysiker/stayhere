@@ -1,0 +1,26 @@
+<%= tinymce_assets %>
+<%= tinymce %>
+
+<%= simple_form_for(@page) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <p>
+      <strong>
+        Deutsch
+      </strong>
+      </p>
+    <%= f.text_area :content, :class => "tinymce", :rows => 12 %>
+    <p>
+      <strong>
+        français
+      </strong>
+      </p>
+    <%= f.text_area :content_fr, :class => "tinymce", :rows => 12 %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

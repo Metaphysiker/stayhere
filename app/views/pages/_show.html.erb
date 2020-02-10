@@ -1,0 +1,10 @@
+
+<% if I18n.locale.to_s == "de" %>
+  <% unless page.content.blank? %>
+    <%= raw Sanitize.fragment(page.content, Sanitize::Config::RELAXED) %>
+  <% end %>
+<% else %>
+  <% unless page.content_fr.blank? %>
+    <%= raw Sanitize.fragment(page.content, Sanitize::Config::RELAXED) %>
+  <% end %>
+<% end %>
