@@ -12,15 +12,17 @@
       </strong>
       </p>
     <%= f.text_area :content, :class => "tinymce", :rows => 12 %>
+    <br />
     <p>
       <strong>
-        français
+        Français
       </strong>
       </p>
     <%= f.text_area :content_fr, :class => "tinymce", :rows => 12 %>
   </div>
 
+  <br />
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-primary" %>
   </div>
 <% end %>

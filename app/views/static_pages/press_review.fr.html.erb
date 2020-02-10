@@ -3,44 +3,7 @@
 
 <div class="bg-light">
   <div class="container text-justify">
-    <p>
-      Brief der Parlamentarier an den Gemeinderat, 15.1., deutsch und französisch:
-      <br />
-        <%= link_to 'Brief-an-den-Gesamtgemeinderat Überparteilich', download_pdf_path("brief-de") %>
-      <br />
-        <%= link_to 'PSR20-f-Déclaration-interpartis-de-groupes-Famille-Safaryan-Mikayelyan', download_pdf_path("brief-fr") %>
-    </p>
-
-    <p class="western" style="margin-bottom: 0in">Beispiel eines
-    Unterstützungsbriefs: <%= link_to "Rolf Hermann", "http://www.rolfhermann.ch" %> an den Gemeinderat, 19.1.2020:</p>
-    <p class="western" style="margin-bottom: 0in"><span>      <%= link_to 'Keine Ausschaffung, sondern Aufenthaltsbewilligung für Familie Safaryan-Mikayelyan', download_pdf_path("brief-rolf-herman") %></span></p>
-    <p lang="en" class="western" style="margin-bottom: 0in"><span lang="de-CH"><br/>
-    </p>
-    <p>
-    Bieler
-    Tagblatt, 8.1. (Carmen
-    Stalder):<br/>
-    <%= link_to 'Abgelehnt – und auseinandergerissen? Eine Familie bangt um ihre Zukunft', download_pdf_path("familie-bt") %>
-    <br/>
-      </p>
-    <p>
-    Journal du Jura:<br/>
-    <%= link_to "Une famille menacée d'éclater", download_pdf_path("menace") %></p>
-    <p lang="en" class="western" style="margin-bottom: 0in"><span lang="de-CH">Bieler
-    Tagblatt, 15.1. (Lino Schaeren):<br/>
-    <%= link_to 'Politiker solidarisieren sich mit Familie Safaryan/Mikayelyan', download_jpg_path("politiker-solidarisieren") %>
-    </p>
-    <p>
-    <br/>
-    Journal du
-    Jura:<br/>
-    <%= link_to "Des élus solidaires des Safaryan/Mikayelyan", "https://www.journaldujura.ch/nouvelles-en-ligne/region/des-elus-solidaires-des-safaryanmikayelyan" %><br/>
-    </p>
-    <p>
-      Biel/Bienne, 22./23.1.20 (Anna Tanner):<br />
-      <%= link_to 'Anna Tanner', download_jpg_path("anna-tanner") %>
-
-    </p>
+    <%= render 'pages/show', page: Page.find(2) %>
   </div>
 </div>
 

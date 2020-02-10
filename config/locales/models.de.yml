@@ -4,6 +4,9 @@ de:
       signature:
         one: "Unterschrift"
         other: "Unterschriften"
+      page:
+        one: "Seite"
+        other: "Seiten"
     attributes:
       signature:
         firstname: "Vorname"
@@ -12,3 +15,6 @@ de:
         comment: "Kommentar"
         i_want_to_be_kept_up_to_date: "Ich möchte auf dem Laufenden bleiben."
         picture: "Bild"
+      page:
+        content: "Inhalt"
+        content_fr: "Französischer Inhalt"

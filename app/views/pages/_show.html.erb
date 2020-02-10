@@ -1,3 +1,7 @@
+<p class="text-justify">
+  <% if user_signed_in? %>
+    <%= link_to 'Bearbeiten', edit_page_path(page), class: "btn btn-primary" %>
+  <% end %>
 
 <% if I18n.locale.to_s == "de" %>
   <% unless page.content.blank? %>
@@ -5,6 +9,7 @@
   <% end %>
 <% else %>
   <% unless page.content_fr.blank? %>
-    <%= raw Sanitize.fragment(page.content, Sanitize::Config::RELAXED) %>
+    <%= raw Sanitize.fragment(page.content_fr, Sanitize::Config::RELAXED) %>
   <% end %>
 <% end %>
+</p>

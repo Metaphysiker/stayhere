@@ -1,19 +1,9 @@
 <main role="main" class="bg-light">
-<%= render "layouts/lead", title: 'Faire un don ', link_to_petition: "true" %>
+<%= render "layouts/lead", title: 'Faire un don', link_to_petition: "true" %>
 
 <div class="bg-light">
   <div class="container text-justify">
-    <p>
-      Comme d'autres demandeurs d'asile déboutés, la famille Mikayelyan-Safaryan vit de l'aide d'urgence
-      (<%= link_to "https://www.ag-nothilfe.ch/was-ist-nothilfe", "https://www.ag-nothilfe.ch/was-ist-nothilfe" %>)
-      c'est-à-dire de CHF 7,50 par jour et par personne. Même si l'appartement et l’assurance maladie sont payés par la ville, CHF 37,50 par jour pour tout le reste est très peu pour une famille de cinq personnes - trop peu pour un avocat, un cours de judo pour Robert, une carte de bibliothèque, des cadeaux pour les anniversaires des enfants, une garderie pour les plus petits , une falafel, une visite au musée, un voyage en train à Neuchâtel, une peluche ou une visite chez le coiffeur. Si vous souhaitez faire un don, vous pouvez le faire :
-      </p>
-      <p>
-        <strong>IBAN CH71 0900 0000 3161 1779 4, Rudolf Albonico, Pestalozzi-Kasse</strong>
-      </p>
-      <p>
-        Sans note, l'argent sera utilisé pour celle-ci et pour d'autres familles similaires, avec la note "Mikayelyan-Safaryan", il profitera directement à la famille. Les donateurs sont invités à consulter la comptabilité sur demande.
-    </p>
+    <%= render 'pages/show', page: Page.find(5) %>
   </div>
 </div>
 
