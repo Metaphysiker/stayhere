@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'seed_dump'
 gem 'sanitize'
 #gem 'tinymce-rails-langs'
 gem 'tinymce-rails'

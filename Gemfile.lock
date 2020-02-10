@@ -229,6 +229,9 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    seed_dump (3.3.1)
+      activerecord (>= 4)
+      activesupport (>= 4)
     selenium-webdriver (3.142.6)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -251,8 +254,6 @@ GEM
     tilt (2.0.10)
     tinymce-rails (5.1.4)
       railties (>= 3.1.1)
-    tinymce-rails-langs (0.1)
-      tinymce-rails (>= 3.4.9)
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
     warden (1.2.8)
@@ -300,12 +301,12 @@ DEPENDENCIES
   rspec-rails
   sanitize
   sass-rails (>= 6)
+  seed_dump
   selenium-webdriver
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   tinymce-rails
-  tinymce-rails-langs
   tzinfo-data
   web-console (>= 3.3.0)
   webdrivers
