@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     get 'langbruck', to: 'static_pages#langbruck', as: 'langbruck'
     get 'children_right', to: 'static_pages#children_right', as: 'children_right'
     get 'pin_board', to: 'signatures#pin_board', as: 'pin_board'
+    get 'update', to: 'static_pages#update', as: 'update'
   end
 
   post '/signatures/add_signature', to: "signatures#add_signature", as: 'add_signature'

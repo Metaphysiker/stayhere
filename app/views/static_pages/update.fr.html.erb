@@ -1,0 +1,11 @@
+<main role="main" class="bg-light">
+<%= render "layouts/lead", title: 'Nouvelles', link_to_petition: "true" %>
+
+<div class="bg-light">
+  <div class="container text-justify">
+    <%= render 'pages/show', page: Page.find(6) %>
+  </div>
+</div>
+
+</main>
+<hr />

@@ -35,6 +35,9 @@ class StaticPagesController < ApplicationController
   def preles
   end
 
+  def update
+  end
+
   def download_pdf
 
     name = params[:name]
