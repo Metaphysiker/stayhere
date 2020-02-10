@@ -1,5 +1,10 @@
 class PagesController < ApplicationController
   before_action :set_page, only: [:show, :edit, :update, :destroy]
+  include ApplicationHelper
+  before_action :authenticate_user!, except: [:show, :index]
+  before_action except: [:show, :index] do
+    allow_if_user_has_role("admin")
+  end
 
   # GET /pages
   # GET /pages.json
