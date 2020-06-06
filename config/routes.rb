@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :attachments
   scope "(:locale)", locale: /de|fr/ do
     root 'static_pages#biel'
     resources :signatures
@@ -32,4 +33,6 @@ Rails.application.routes.draw do
   get "signatures-admin/emails", to: "signatures#emails", as: 'emails'
 
     devise_for :users
+
+    post 'uploader/image', to: 'uploader#image'
 end

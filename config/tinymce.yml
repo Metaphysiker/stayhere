@@ -1,5 +1,9 @@
 menubar: false
 toolbar:
-  - styleselect | bold italic | undo redo | link
+  - styleselect | bold italic | undo redo | link | image | table | code | alignleft | aligncenter | alignjustify
 plugins:
   - link
+  - table
+  - code
+  - image
+images_upload_url: '/uploader/image'

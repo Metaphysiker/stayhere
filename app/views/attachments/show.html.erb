@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @attachment.name %>
+</p>
+<p>
+    <%= (link_to @attachment.name, rails_blob_path(@attachment.attachment, disposition: "attachment")).chomp  %>
+</p>
+
+<%= link_to 'Edit', edit_attachment_path(@attachment) %> |
+<%= link_to 'Back', attachments_path %>
